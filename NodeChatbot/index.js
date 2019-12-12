@@ -3,9 +3,6 @@ const TelegramBot = require('node-telegram-bot-api');
  const token = '1031741182:AAHvzeiE0WCIAoAjSFakVFhOGJy8m5lcDNM';
  const bot = new TelegramBot(token, {polling: true});
 
- const SerialPort = require('@serialport/stream');
-
- const serialport = new SerialPort('COM5', { autoOpen: false });
 
  
 bot.onText(/\/echo (.+)/, (msg, match) => {
